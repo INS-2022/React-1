@@ -1,13 +1,132 @@
 body {
+  position: relative;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('../public/background.jpeg'); */
+  /* filter: blur(8px); */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/background.jpeg');
+  filter: blue(4px); /* Apply your filter here */
+  z-index: -1;
+}
+
+
+.navbar-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hamburger-menu-button{
+  height: 2rem;
+  margin: 0;
+  color: white;
+  width: max-content;
+  background-color: #1a1a1a;
+  padding: 0.5rem;
+  /* justify-content: left; */
+}
+
+.search-input {
+  width: 100%;
+  height: 2rem;
+  margin: 0;
+  color: white;
+  background-color: #1a1a1a;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: white solid 0.1rem;
+  /* add animation */
+}
+
+.search-input:focus {
+  outline: none;
+} 
+
+.sidebar-container{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  color: white;
+  background-color: #1a1a1a;
+  text-decoration: none;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-item {
+  padding: 0.5rem;
+}
+
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+}
+
+.title{
+  text-align: center;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0.2rem 0 0.2rem 0;
+  padding: 0.5rem;
+  border: #1a1a1a solid 0.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body{
+  align-self: flex-start;
+}
+.card-side{
+  vertical-align: middle;
+}
+
+.card-title{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: xx-large;
+}
+
+.card-right-data{
+  margin: 0;
+  vertical-align: middle;
+  padding: 0;
+  text-align: right;
+  font-size: large;
 }
